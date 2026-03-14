@@ -1,5 +1,5 @@
-import { utilService } from '../../../services/util.service.js'
-import { storageService } from '../../../services/async-storage.service.js'
+import { utilService } from './service/utilService'
+import { storageService } from './async-storage.service.js'
 
 const NOTE_KEY = 'noteDB'
 _createNotes()
@@ -13,6 +13,8 @@ export const noteService = {
   getDefaultFilter,
   getFilterFromSearchParams,
 }
+
+window.bs = noteService
 
 function getDefaultFilter(filterBy = { txt: '' }) {
   return { txt: filterBy.txt ?? '' }
