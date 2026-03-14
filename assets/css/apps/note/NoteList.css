@@ -1,1 +1,16 @@
  /* note list */
+ .note-list ul {
+    gap: 1em;
+ }
+
+ .note-list li {
+    display: grid;
+    padding: 1em;
+    background-color: white;
+ }
+
+ .note-list li .actions {
+    display: flex;
+    justify-content: end;
+}
+ 
