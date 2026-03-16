@@ -1,5 +1,5 @@
-import { utilService } from './service/utilService'
-import { storageService } from './async-storage.service.js'
+import { utilService } from '../../../services/util.service.js'
+import { storageService } from '../../../services/async-storage.service.js'
 
 const NOTE_KEY = 'noteDB'
 _createNotes()
@@ -17,40 +17,30 @@ export const noteService = {
 window.bs = noteService
 
 function getDefaultFilter(filterBy = { txt: '' }) {
-  return { txt: filterBy.txt ?? '' }
+  return { txt: '' }
 }
 
 function getFilterFromSearchParams(searchParams) {
   const defaultFilter = getDefaultFilter()
   const filterBy = {}
   for (const field in defaultFilter) {
-    filterBy[field] = searchParams.get(field) ?? defaultFilter[field]
+    if(searchParams.get(field)) {
+      filterBy[field] = defaultFilter[field]
+    }
   }
   return filterBy
 }
 
-function _getNoteSearchText(note = { info: {} }) {
-  const { info = {} } = note
-  return {
-    txt: info.txt ?? '',
-    title: info.title ?? '',
-    todosTxt: (info.todos ?? []).map((t) => t.txt).join(' '),
-  }
-}
-
 function query(filterBy = {}) {
-  const filter = getDefaultFilter(filterBy)
-  return storageService.query(NOTE_KEY).then((notes) => {
-    if (filter.txt) {
-      const regExp = new RegExp(filter.txt, 'i')
-      notes = notes.filter((note) => {
-        const searchable = _getNoteSearchText(note)
-        const text = [searchable.txt, searchable.title, searchable.todosTxt].join(' ')
-        return regExp.test(text)
-      })
-    }
-    return notes
-  })
+  // const filter = getDefaultFilter(filterBy)
+  return storageService.query(NOTE_KEY)
+      /*if (filter.txt) {
+        const regExp = new RegExp(filter.txt, 'i')
+        notes = notes.filter((note) => {
+          // const searchable = _getNoteSearchText(note)
+          // const text = [searchable.txt, searchable.title, searchable.todosTxt].join(' ')
+          return regExp.test(note.info.txt) || regExp.test(note.info.title)
+      })*/
 }
 
 function get(noteId) {

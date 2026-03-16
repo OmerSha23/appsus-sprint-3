@@ -4,7 +4,7 @@ export function NoteTodos({ note }) {
     <div className="note-todos">
       {title && <h4>{title}</h4>}
       <ul>
-        {todos?.map((todo, idx) => (
+        {todos.map((todo, idx) => (
           <li key={idx} className={todo.isDone ? 'done' : ''}>
             {todo.txt}
           </li>

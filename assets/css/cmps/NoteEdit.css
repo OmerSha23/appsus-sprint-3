@@ -1,0 +1,11 @@
+.note-edit {
+    display: grid;
+    max-width: 50%;
+    margin-inline: auto;
+}
+
+.note-edit {
+    input {
+        grid-row: 2;
+    }
+}
