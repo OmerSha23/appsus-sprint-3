@@ -1,0 +1,16 @@
+.mail-list {
+    flex: 1;
+    overflow-y: auto;
+}
+.mail-list.loading,
+.mail-list.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #80868b;
+    font-size: 14px;
+    height: 300px;
+}
+.mail-list.empty i { font-size: 48px; opacity: 0.4; }
