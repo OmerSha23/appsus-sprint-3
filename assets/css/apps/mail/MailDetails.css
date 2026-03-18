@@ -1,0 +1,116 @@
+.mail-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #fff;
+
+
+
+}
+
+.details-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    border-bottom: 1px solid #e2e6ea;
+}
+.toolbar-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 13px;
+    color: #444746;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s;
+}
+.toolbar-btn:hover { background: #f1f3f4; }
+.toolbar-btn i.stared { color: #f4b400; }
+.toolbar-actions { display: flex; align-items: center; gap: 2px; }
+.toolbar-nav { display: flex; margin-left: auto; }
+.save-note-btn { font-size: 12px; }
+
+.details-scroll {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 32px;
+}
+
+.details-subject {
+    font-size: 24px;
+    font-weight: 400;
+    color: #202124;
+    margin: 0 0 20px;
+    line-height: 1.3;
+}
+
+.details-meta {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e6ea;
+}
+.meta-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #1a73e8;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+.meta-info { flex: 1; }
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+}
+.meta-from { font-size: 15px; font-weight: 500; color: #202124; }
+.meta-date { font-size: 12px; color: #80868b; white-space: nowrap; }
+.meta-to { font-size: 13px; color: #80868b; margin-top: 2px; display: block; }
+
+.details-body {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #202124;
+    max-width: 720px;
+}
+.details-body p { margin: 0 0 4px; }
+
+.details-reply-bar {
+    margin-top: 40px;
+    display: flex;
+    gap: 12px;
+}
+.reply-bar-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border: 1px solid #dadce0;
+    background: #fff;
+    border-radius: 20px;
+    font-family: 'Google Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #202124;
+    cursor: pointer;
+    transition: background 0.15s, box-shadow 0.15s;
+}
+.reply-bar-btn:hover {
+    background: #f1f3f4;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
