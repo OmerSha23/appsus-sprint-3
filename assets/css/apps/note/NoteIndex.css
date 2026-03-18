@@ -1,4 +1,8 @@
- /* note index */
- 
+/* note index */
+.notes-index {
+  font-family: 'Roboto', sans-serif;
+}
 
- 
+.notes-index button {
+  cursor: pointer;
+}

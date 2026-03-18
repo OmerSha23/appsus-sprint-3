@@ -69,7 +69,7 @@ function _createNotes() {
         type: 'NoteImg',
         isPinned: false,
         style: { backgroundColor: '#0d0' },
-        info: { url: 'http://some-img/me', title: 'Bobi and Me' },
+        info: { url: 'assets/img/img.webp', title: 'Bobi and Me' },
       },
       {
         id: 'n103',
@@ -106,7 +106,7 @@ function getEmptyNote(type) {
     style: { backgroundColor: '#fff' },
   }
   if (type === 'NoteTxt') {
-    note.info = { txt: '' }
+    note.info = { txt: '', title: '' }
   } else if (type === 'NoteImg') {
     note.info = { url: '', title: '' }
   } else if (type === 'NoteTodos') {
@@ -114,7 +114,7 @@ function getEmptyNote(type) {
   } else if (type === 'NoteVideo') {
     note.info = { url: '', title: '' }
   } else {
-    note.info = { txt: '' }
+    note.info = { txt: '', title: '' }
   }
   return note
 }

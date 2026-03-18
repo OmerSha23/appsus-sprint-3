@@ -1,0 +1,66 @@
+.note-edit-container {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px 0px;
+    box-sizing: border-box;
+    color: rgb(32, 33, 36);
+    max-width: 50%;
+    margin: 1.5em auto;
+    padding: 1em;
+}
+
+.note-edit {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto;
+}
+
+.note-edit input {
+    border: none;
+}
+
+.note-edit input:focus {
+    outline: none;
+}
+
+.note-edit-title {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    font-size: 1.25em;
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 0;
+    padding-left: 16px;
+    text-wrap: wrap;
+}
+
+.note-edit-title::placeholder {
+    font-size: 1.25em;
+}
+
+.note-edit-content {
+    grid-row: 2;
+    grid-column: 1;
+    font-size: 1em;
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    text-wrap: wrap;
+}
+
+.note-edit-content::placeholder {
+    font-size: 1em;
+}
+
+.note-edit-btn {
+    grid-row: 2;
+    grid-column: 2;
+    align-self: end;
+    margin-top: 0;
+    font-size: 0.875em;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    background: transparent;
+}

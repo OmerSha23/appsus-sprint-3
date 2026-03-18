@@ -1,0 +1,14 @@
+.note-todos ul {
+  list-style: disc;
+  padding-left: 1.5em;
+  margin: 0.5em 0;
+}
+
+.note-todos li {
+  margin: 0.25em 0;
+}
+
+.note-todos li.done {
+  text-decoration: line-through;
+  opacity: 0.7;
+}

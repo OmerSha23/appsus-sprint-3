@@ -2,50 +2,65 @@ const { useEffect, useState } = React
 const { useNavigate } = ReactRouterDOM
 const { useParams } = ReactRouterDOM
 import { noteService } from "../../note/services/note.service.js"
+import { showSuccessMsg, showErrorMsg } from "../../../services/event-bus.service.js"
 
-export function NoteEdit() {
-    const [note, setNote] = useState(noteService.getEmptyNote())
+export function NoteEdit({ noteIdToEdit, onSaveNote: onSaveNoteCb, onAddNote }) {
+    const [note, setNote] = useState(noteService.getEmptyNote('NoteTxt'))
     const navigate = useNavigate()
     const params = useParams()
 
     useEffect(() => {
-        if (params.id) {
-            noteService.get(note.id)
+        const idToLoad = noteIdToEdit || params.id
+        if (idToLoad) {
+            noteService.get(idToLoad)
                 .then(setNote)
+        } else {
+            setNote(noteService.getEmptyNote('NoteTxt'))
         }
-    }, [])
+    }, [noteIdToEdit, params.id])
 
     function handleChange({ target }) {
-        const { type, name, value } = target
-        setNote(prev => ({ ...prev, [name]: type === 'text' }))
+        const { name, value } = target
+        setNote(prev => ({
+            ...prev,
+            info: { ...prev.info, [name]: value }
+        }))
     }
 
     function onSaveNote(ev) {
         ev.preventDefault()
         noteService.save(note)
-            .then(() => navigate('/note'))
+            .then(() => {
+                showSuccessMsg(note.id ? 'Note saved' : 'Note added')
+                setNote(noteService.getEmptyNote('NoteTxt'))
+                if (onSaveNoteCb) onSaveNoteCb()
+                navigate('/note')
+            })
+            .catch(err => showErrorMsg(note.id ? "Couldn't save note" : "Couldn't add note"))
     }
 
-    return <form className="note-edit" onSubmit={onSaveNote}>
-        <label htmlFor="title">title:</label>
+    return <div className="note-edit-container">
+        <form className="note-edit" onSubmit={onSaveNote}>
         <input
             type="text"
+            className="note-edit-title"
             placeholder="Title"
             id="title"
             name="title"
-            value={note.title}
+            value={note.info.title || ''}
             onChange={handleChange}
         />
 
-        <label htmlFor="content">content:</label>
         <input
-            type="content"
-            placeholder="Content"
+            type="text"
+            className="note-edit-content"
+            placeholder="Take a note..."
             id="content"
-            name="content"
-            value={note.content}
+            name="txt"
+            value={note.info.txt || ''}
             onChange={handleChange} />
 
-        <button>Save</button>
+        <button type="submit" className="note-edit-btn">Save Note</button>
     </form>
+    </div>
 }

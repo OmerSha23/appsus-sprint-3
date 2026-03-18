@@ -1,5 +1,6 @@
 
 @import './basics/vars.css';
+@import './basics/fonts.css';
 @import './basics/base.css';
 @import './basics/helpers.css';
 @import './basics/layout.css';
@@ -7,9 +8,11 @@
 @import './cmps/home.css';
 @import './cmps/UserMsg.css';
 @import './cmps/AppHeader.css';
-@import './cmps/NoteEdit.css';
-
 @import './apps/note/NoteIndex.css';
+@import './apps/note/NoteList.css';
+@import './apps/note/NoteEdit.css';
+@import './apps/note/NoteImg.css';
+@import './apps/note/NoteTodos.css';
 
 @import './apps/mail/MailIndex.css';
 @import './apps/mail/MailList.css';
