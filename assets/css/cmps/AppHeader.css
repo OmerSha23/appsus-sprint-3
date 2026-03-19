@@ -1,51 +1,16 @@
 .app-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
-    height: 56px;
-    background: #f6f8fc;
-    border-bottom: 1px solid #e2e6ea;
-}
-
-.app-logo {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    text-decoration: none;
-}
-
-.logo-text {
-    font-family: 'Google Sans', sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: -0.5px;
-    line-height: 1;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+    padding: 1em;
+    background: var(--bg1);
 }
 
 nav a {
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-family: 'Google Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #444746;
-    text-decoration: none;
-    transition: background 0.15s;
-}
-
-nav a:hover {
-    background: #e9eef6;
+    margin: .5em;
 }
 
 nav a.active {
-    color: #1a73e8;
-    background: #d3e3fd;
-    font-weight: 600;
+    color: var(--color1);
+    font-weight: bold;
+    text-decoration: overline;
 }

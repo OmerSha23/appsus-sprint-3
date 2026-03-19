@@ -12,7 +12,8 @@
 }
 
 .user-msg.success {
-    background-color: var(--color2);
+    background-color: white;
+    border: 1px solid lightgray;
 }
 
 .user-msg.error {
