@@ -17,6 +17,4 @@ export function NoteList({ notes, onRemoveNote, onEditNote }) {
       </li>)}
     </ul>
   </section>
-}export function NoteList() {
-    return <div>note list</div>
 }
