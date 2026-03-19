@@ -11,9 +11,15 @@
 @import './cmps/AppHeader.css';
 @import './apps/note/NoteIndex.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 @import './apps/note/NoteList.css';
 @import './apps/note/NoteEdit.css';
 @import './apps/note/NoteImg.css';
+=======
+@import './apps/note/NoteEdit.css';
+@import './apps/note/NoteImg.css';
+@import './apps/note/NoteList.css';
+>>>>>>> 6f69f36 (Add css files for note app)
 =======
 @import './apps/note/NoteEdit.css';
 @import './apps/note/NoteImg.css';
