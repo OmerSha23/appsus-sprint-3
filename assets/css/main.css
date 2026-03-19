@@ -4,14 +4,15 @@
 @import './basics/base.css';
 @import './basics/helpers.css';
 @import './basics/layout.css';
+@import './basics/fonts.css';
 
 @import './cmps/home.css';
 @import './cmps/UserMsg.css';
 @import './cmps/AppHeader.css';
 @import './apps/note/NoteIndex.css';
-@import './apps/note/NoteList.css';
 @import './apps/note/NoteEdit.css';
 @import './apps/note/NoteImg.css';
+@import './apps/note/NoteList.css';
 @import './apps/note/NoteTodos.css';
 
 @import './apps/mail/MailIndex.css';
