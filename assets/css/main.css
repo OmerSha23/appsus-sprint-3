@@ -9,23 +9,17 @@
 @import './cmps/home.css';
 @import './cmps/UserMsg.css';
 @import './cmps/AppHeader.css';
+
 @import './apps/note/NoteIndex.css';
-<<<<<<< HEAD
-<<<<<<< HEAD
 @import './apps/note/NoteList.css';
 @import './apps/note/NoteEdit.css';
 @import './apps/note/NoteImg.css';
-=======
-@import './apps/note/NoteEdit.css';
-@import './apps/note/NoteImg.css';
-@import './apps/note/NoteList.css';
->>>>>>> 6f69f36 (Add css files for note app)
-=======
-@import './apps/note/NoteEdit.css';
-@import './apps/note/NoteImg.css';
-@import './apps/note/NoteList.css';
->>>>>>> 6f69f36 (Add css files for note app)
 @import './apps/note/NoteTodos.css';
 
 @import './apps/mail/MailIndex.css';
 @import './apps/mail/MailList.css';
+@import './apps/mail/MailPreview.css';
+@import './apps/mail/MailDetails.css';
+@import './apps/mail/MailCompose.css';
+@import './apps/mail/MailFilter.css';
+@import './apps/mail/MailFolderList.css';
