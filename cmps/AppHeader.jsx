@@ -10,6 +10,13 @@ export function AppHeader() {
                 <span style={{color:'#4285F4'}}>g</span>
                 <span style={{color:'#34A853'}}>l</span>
                 <span style={{color:'#EA4335'}}>e</span>
+                <span style={{color:'#4285F4'}}> </span>
+                <span style={{color:'#EA4335'}}>A</span>
+                <span style={{color:'#FBBC05'}}>p</span>
+                <span style={{color:'#4285F4'}}>p</span>
+                <span style={{color:'#34A853'}}>s</span>
+                <span style={{color:'#EA4335'}}>u</span>
+                <span style={{color:'#FBBC05'}}>s</span>
             </span>
         </Link>
         <nav>
