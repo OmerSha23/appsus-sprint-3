@@ -10,7 +10,6 @@ export function MailCompose({ onSendMail, onSaveDraft, onClose }) {
     const draftTimerRef = useRef(null)
     const loggedInUser = mailService.getLoggedInUser()
 
-    // Auto-save draft every 5 seconds if there's any content
     useEffect(() => {
         draftTimerRef.current = setInterval(() => {
             if (!isSent && (to || subject || body)) {

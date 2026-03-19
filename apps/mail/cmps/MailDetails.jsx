@@ -10,7 +10,6 @@ function formatFullDate(ts) {
 export function MailDetails({ mail, onBack, onRemoveMail, onToggleStar, onNavigateMail, onCompose }) {
     if (!mail) return null
 
-    // Build "Save as Note" link using query params
     const noteParams = new URLSearchParams({
         title: mail.subject,
         txt: `From: ${mail.from}\n\n${mail.body}`

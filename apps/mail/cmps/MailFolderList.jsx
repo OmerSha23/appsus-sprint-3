@@ -14,7 +14,6 @@ export function MailFolderList({ activeFolder, onSelectFolder }) {
     const [counts, setCounts] = useState({})
 
     useEffect(() => {
-        // Count unread per folder
         Promise.all(
             FOLDERS.map(f =>
                 mailService.query({ status: f.key }).then(mails => ({
